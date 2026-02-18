@@ -4,3 +4,17 @@ const paragraphs =["Video provides a powerful way to help you prove your point. 
 "Save time in Word with new buttons that show up where you need them. To change the way a picture fits in your document, click it and a button for layout options appears next to it. When you work on a table, click where you want to add a row or a column, and then click the plus sign.",
 "Reading is easier, too, in the new Reading view. You can collapse parts of the document and focus on the text you want. If you need to stop reading before you reach the end, Word remembers where you left off - even on another device."
 ];
+
+
+// ===================================
+const typingText = document.querySelector(".typingText");
+
+function randomParagraph(){
+    let randTndex = Math.floor(Math.random() * paragraphs.length);
+    paragraphs[randTndex].split("").forEach(span => {
+        let spanTag =  `<span>${span}</span>`;
+        typingText.innerHTML += spanTag;
+    });
+}
+randomParagraph();
+// ===================================
